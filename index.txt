@@ -1,0 +1,82 @@
+#IMPORTANTE->>>>
+para que este projecto tenga un buen funcionamiente es necesario instalar Java
+y configurar las variables de entorno del equipo para que maneje ciertos modulos.
+
+
+
+----------->Para Comenzar
+
+.para poder instalar lo que se requiere para que este proyecto funcione, necesita abrir una terminal y escribir el comando 
+
+npm install
+
+esto instalara los modulos necesarios para el correcto funcionamiento
+
+
+.para crear la tabala en la base de datos local necesitara corre el siguiente comando 
+
+npm run create_data 
+
+esto generara una tabala en la db de dynamo 
+---------------------------------------------
+
+
+
+.....DynamoDB
+-para correr la base de datos de manera local, necesitamos tener instalado lenguaje de java 
+para correr el script   
+
+java -Djava.library.path=C:\Users\USUARIO\Downloads\DynamoDBLocal_lib -jar C:\Users\USUARIO\Downloads\DynamoDBLocal.jar -sharedD
+
+en una nueva terminal del cmd del sistema operativo ya que este interactua directamente con la simulacion de la db de aws en nuestro 
+computador y permite hacer operaciones en ella
+
+
+
+al tener la base de datos corriento en el puerto lo siguiente será correr en una terminal 
+del proyecto el comando 
+
+npm run database
+
+este comando corre el script para la configuracion de la conexion a la base de dato
+
+
+-------------------------------------------------------------------------------
+
+
+
+
+
+...Serverless
+.para correr serverles es necesario primero abrir una terminal desde el proyecto e ingresar
+
+npm run dev
+
+que es necesario para que el servicio de serverless despegue y pueda pasar las funciones y utilizar sus metodos http
+
+
+-------------------------------------------------------------------------------
+
+
+
+
+...funciones Lambda
+
+importante saber que la carpeta src contiene los directorios y archivos necesarios para la configuracion 
+de las funciones lambda dentro de los ficheros:
+
+-./src/services/conection.js
+esta modulacion de archivo contiene la conexion de sdk a dynamo
+    
+
+
+
+
+
+
+-./src/models/model.js
+esta modulacion de archivo contiene la configuracion de modelos para las tablas
+
+
+
+

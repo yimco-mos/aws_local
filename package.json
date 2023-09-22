@@ -1,0 +1,25 @@
+{
+  "name": "serverless",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "serverless offline",
+    "create_data": "node  src/config/create/createData.js",
+    "test": "test"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@aws-sdk/client-dynamodb": "^3.417.0",
+    "@aws-sdk/util-dynamodb": "^3.417.0",
+    "aws-sdk": "^2.1462.0",
+    "axios": "^1.5.0",
+    "bcrypt": "^5.1.1",
+    "jsonwebtoken": "^9.0.2",
+    "nodemon": "^3.0.1",
+    "serverless": "^3.35.2",
+    "serverless-offline": "^13.0.0"
+  }
+}

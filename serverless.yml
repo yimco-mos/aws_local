@@ -1,0 +1,28 @@
+#esta version de serverless es la @2
+
+service: service
+frameworkVersion: '2'
+useDotenv: true
+
+provider:
+  name: aws
+  runtime: nodejs14.x
+  region: us-east-1 
+
+functions:
+  register:
+    handler: src/service/register_user.register
+    events:
+      - httpApi:
+          method: POST
+          path: /register_user
+
+  login:
+    handler: src/service/login_user.login
+    events:
+      - httpApi:
+          method: POST
+          path: /login_user
+
+plugins:
+  - serverless-offline
